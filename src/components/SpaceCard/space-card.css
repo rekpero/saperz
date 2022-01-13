@@ -1,0 +1,89 @@
+.card-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #fafafa;
+  border-radius: 8px;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  color: #32357c;
+  margin-bottom: 10px;
+}
+
+.schedule-time {
+  font-size: 13px;
+  font-weight: 500;
+  color: #de887e;
+  margin-bottom: 0.5rem;
+}
+
+.card-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tag {
+  font-size: 13px;
+  font-weight: 500;
+  color: #80819b;
+  margin-bottom: 0.5rem;
+}
+
+.card-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.heart-icon {
+  height: 1rem;
+  width: 1rem;
+}
+
+.external-link-icon {
+  height: 1rem;
+  width: 1rem;
+  display: flex;
+  margin-left: 4px;
+}
+
+.subscribe-button {
+  cursor: pointer;
+  border: 1px solid #80819b;
+  color: #80819b;
+  border-radius: 50%;
+  height: 1.5rem;
+  width: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.subscribe-button:hover {
+  background-color: #32357c;
+  border: 1px solid #32357c;
+  color: white;
+}
+
+.link {
+  text-decoration: none;
+  color: #3463ae;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+}
+
+.link:hover {
+  text-decoration: underline;
+}

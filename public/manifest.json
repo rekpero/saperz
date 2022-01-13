@@ -1,11 +1,11 @@
 {
   "manifest_version": 2,
   "version": "0.0.1",
-  "short_name": "React App",
-  "name": "Create React App Sample",
-  "description": "Sample application showing how to create an extension with Create React App",
+  "short_name": "Saperz",
+  "name": "Saperz - Find your web3 twitter spaces",
+  "description": "Saperz is a web3 twitter space finder. It allows you to find web3 related twitter spaces and notifies you when it get started.",
   "browser_action": {
-    "default_title": "CRE",
+    "default_title": "Saperz",
     "default_popup": "popup.html"
   },
   "background": {
