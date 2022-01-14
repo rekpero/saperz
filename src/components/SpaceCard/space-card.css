@@ -76,6 +76,12 @@
   color: white;
 }
 
+.subscribed {
+  background-color: #32357c !important;
+  border: 1px solid #32357c !important;
+  color: white !important;
+}
+
 .link {
   text-decoration: none;
   color: #3463ae;

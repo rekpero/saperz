@@ -10,7 +10,6 @@
     "react-browser-extension-scripts": "4.0.10",
     "react-dom": "^17.0.2",
     "react-spinners": "^0.11.0",
-    "swr": "^1.1.2",
     "web-vitals": "^1.0.1"
   },
   "scripts": {

@@ -1,19 +1,19 @@
 import React from "react";
 import "./space-card.css";
 
-function SpaceCard({ title, scheduled_start, id }) {
+function SpaceCard({ space, onSubscribe }) {
   return (
     <div className="card-container">
       <div className="card-top">
         <div className="schedule-time">
-          {new Date(scheduled_start).toLocaleString()}
+          {new Date(space.scheduled_start).toLocaleString()}
         </div>
         <div className="tag">#web3</div>
       </div>
-      <div className="title">{title}</div>
+      <div className="title">{space.title}</div>
       <div className="card-footer">
         <a
-          href={`https://twitter.com/i/spaces/${id}/peek`}
+          href={`https://twitter.com/i/spaces/${space.id}/peek`}
           target="_blank"
           rel="noopener noreferrer"
           className="link"
@@ -36,7 +36,10 @@ function SpaceCard({ title, scheduled_start, id }) {
             </svg>
           </span>
         </a>
-        <div className="subscribe-button">
+        <div
+          className={`subscribe-button ${space.is_subscribed && "subscribed"}`}
+          onClick={(e) => onSubscribe(space)}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="heart-icon"
