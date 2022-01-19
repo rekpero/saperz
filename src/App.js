@@ -47,7 +47,6 @@ function App() {
     const response = await fetcher(
       "https://api.twitter.com/2/spaces/search?" + query
     );
-    console.log(response.data);
     const resSpaces = response.data.sort((a, b) => {
       return (
         new Date(a.scheduled_start).getTime() -
@@ -56,7 +55,6 @@ function App() {
     });
     chrome.storage.sync.get(["subscriptions"], (result) => {
       const subscriptions = result.subscriptions || [];
-      console.log(result);
       const updatedSpaces = resSpaces.map((s) => ({
         ...s,
         is_subscribed: subscriptions.map((s) => s.id).includes(s.id),
@@ -72,7 +70,6 @@ function App() {
         const subscriptions = result.subscriptions || [];
         subscriptions.push(space);
         chrome.storage.sync.set({ subscriptions }, () => {
-          console.log("subscribed");
           chrome.alarms.create(space.id, {
             when: new Date(space.scheduled_start).getTime(),
           });
